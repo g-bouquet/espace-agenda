@@ -23,11 +23,11 @@ const Header = () => {
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         {/* Logo */}
         <div className="flex lg:flex-1">
-          <Link to="/" className="-m-1.5 p-1.5 flex items-center gap-3">
+          <Link to="/" className="-m-1.5 p-1.5 flex items-center">
             <img 
               src="/logo-espace-agenda.png" 
               alt="Espace Agenda" 
-              className="h-12 w-auto"
+              className="h-10 w-auto"
             />
           </Link>
         </div>
