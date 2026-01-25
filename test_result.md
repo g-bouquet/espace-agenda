@@ -294,14 +294,13 @@ metadata:
 
 test_plan:
   current_focus:
-    - "Contact API - POST /api/contact"
-    - "Blog API - GET /api/blog/posts"
-    - "Blog API - GET /api/blog/posts/{id}"
-    - "Blog API - GET /api/blog/categories"
-    - "CMS Blog - POST /api/blog/posts"
-    - "CMS Blog - PUT /api/blog/posts/{id}"
-    - "CMS Blog - DELETE /api/blog/posts/{id}"
-    - "Database Integration - MongoDB"
+    - "Homepage - Logo and CTA buttons"
+    - "Blog Page - API Integration"
+    - "Individual Blog Post - API Integration"
+    - "Contact Form - API Integration"
+    - "Form Validation - HTML5 validation"
+    - "Navigation - All pages and links"
+    - "Responsive Design - Mobile compatibility"
   stuck_tasks: []
   test_all: true
   test_priority: "high_first"
