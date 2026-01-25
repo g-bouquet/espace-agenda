@@ -62,11 +62,23 @@ const Exemples = () => {
             {useCases.map((useCase, index) => {
               const Icon = useCase.icon;
               return (
-                <Card key={index} className="border-neutral-200 hover:border-amber-700 transition-all duration-300 hover:shadow-lg">
-                  <CardContent className="pt-8">
-                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                      <div className="lg:col-span-2">
-                        <div className="flex items-start gap-4">
+                <Card key={index} className="border-neutral-200 hover:border-amber-700 transition-all duration-300 hover:shadow-lg overflow-hidden">
+                  <CardContent className="pt-0 p-0">
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-0">
+                      {/* Image Section */}
+                      <div className="lg:col-span-1">
+                        <div className="aspect-square lg:aspect-auto lg:h-full overflow-hidden">
+                          <img 
+                            src={useCase.image} 
+                            alt={useCase.title}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                      </div>
+                      
+                      {/* Content Section */}
+                      <div className="lg:col-span-2 p-8">
+                        <div className="flex items-start gap-4 mb-6">
                           <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-amber-100 text-amber-700">
                             <Icon className="h-6 w-6" />
                           </div>
@@ -75,8 +87,7 @@ const Exemples = () => {
                             <p className="text-lg text-neutral-600 mb-6">{useCase.description}</p>
                           </div>
                         </div>
-                      </div>
-                      <div className="lg:col-span-1">
+                        
                         <div className="bg-neutral-50 rounded-lg p-6">
                           <h4 className="font-semibold text-neutral-900 mb-4">Fonctionnalités clés</h4>
                           <ul className="space-y-2">
