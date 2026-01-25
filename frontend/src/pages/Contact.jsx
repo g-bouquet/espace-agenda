@@ -66,10 +66,10 @@ const Contact = () => {
       <section className="relative bg-gradient-to-b from-sky-50 to-white py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-neutral-900 sm:text-5xl">
+            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
               Contactez-nous
             </h1>
-            <p className="mt-6 text-lg leading-8 text-neutral-600">
+            <p className="mt-6 text-lg leading-8 text-muted-foreground">
               Une question ? Un projet ? Notre équipe est à votre écoute pour vous accompagner dans la mise en place de votre solution de prise de rendez-vous.
             </p>
           </div>
@@ -83,18 +83,18 @@ const Contact = () => {
             {/* Contact Info */}
             <div className="lg:col-span-1 space-y-8">
               <div>
-                <h2 className="text-2xl font-bold text-neutral-900 mb-8">Nos coordonnées</h2>
+                <h2 className="text-2xl font-bold text-foreground mb-8">Nos coordonnées</h2>
               </div>
 
-              <Card className="border-neutral-200">
+              <Card className="border-border">
                 <CardContent className="pt-6">
                   <div className="flex items-start gap-4">
-                    <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-amber-100 text-amber-700">
+                    <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
                       <Mail className="h-5 w-5" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-neutral-900 mb-1">Email</h3>
-                      <a href="mailto:contact@espaceagenda.fr" className="text-neutral-600 hover:text-amber-700 transition-colors">
+                      <h3 className="font-semibold text-foreground mb-1">Email</h3>
+                      <a href="mailto:contact@espaceagenda.fr" className="text-muted-foreground hover:text-primary transition-colors">
                         contact@espaceagenda.fr
                       </a>
                     </div>
@@ -102,15 +102,15 @@ const Contact = () => {
                 </CardContent>
               </Card>
 
-              <Card className="border-neutral-200">
+              <Card className="border-border">
                 <CardContent className="pt-6">
                   <div className="flex items-start gap-4">
                     <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-sky-100 text-sky-800">
                       <Phone className="h-5 w-5" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-neutral-900 mb-1">Téléphone</h3>
-                      <a href="tel:+33123456789" className="text-neutral-600 hover:text-amber-700 transition-colors">
+                      <h3 className="font-semibold text-foreground mb-1">Téléphone</h3>
+                      <a href="tel:+33123456789" className="text-muted-foreground hover:text-primary transition-colors">
                         01 23 45 67 89
                       </a>
                       <p className="text-sm text-neutral-500 mt-1">
@@ -122,15 +122,15 @@ const Contact = () => {
                 </CardContent>
               </Card>
 
-              <Card className="border-neutral-200">
+              <Card className="border-border">
                 <CardContent className="pt-6">
                   <div className="flex items-start gap-4">
-                    <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-amber-100 text-amber-700">
+                    <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
                       <MapPin className="h-5 w-5" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-neutral-900 mb-1">Adresse</h3>
-                      <p className="text-neutral-600">
+                      <h3 className="font-semibold text-foreground mb-1">Adresse</h3>
+                      <p className="text-muted-foreground">
                         123 Avenue de la République<br />
                         75011 Paris<br />
                         France
@@ -143,16 +143,16 @@ const Contact = () => {
 
             {/* Contact Form */}
             <div className="lg:col-span-2">
-              <Card className="border-neutral-200">
+              <Card className="border-border">
                 <CardContent className="pt-8">
-                  <h2 className="text-2xl font-bold text-neutral-900 mb-6">
+                  <h2 className="text-2xl font-bold text-foreground mb-6">
                     Envoyez-nous un message
                   </h2>
                   
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
-                        <label htmlFor="name" className="block text-sm font-medium text-neutral-900 mb-2">
+                        <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
                           Nom complet *
                         </label>
                         <input
@@ -168,7 +168,7 @@ const Contact = () => {
                       </div>
 
                       <div>
-                        <label htmlFor="email" className="block text-sm font-medium text-neutral-900 mb-2">
+                        <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
                           Email *
                         </label>
                         <input
@@ -186,7 +186,7 @@ const Contact = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
-                        <label htmlFor="phone" className="block text-sm font-medium text-neutral-900 mb-2">
+                        <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
                           Téléphone
                         </label>
                         <input
@@ -201,7 +201,7 @@ const Contact = () => {
                       </div>
 
                       <div>
-                        <label htmlFor="subject" className="block text-sm font-medium text-neutral-900 mb-2">
+                        <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
                           Sujet *
                         </label>
                         <select
@@ -224,7 +224,7 @@ const Contact = () => {
                     </div>
 
                     <div>
-                      <label htmlFor="message" className="block text-sm font-medium text-neutral-900 mb-2">
+                      <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
                         Message *
                       </label>
                       <textarea
@@ -242,7 +242,7 @@ const Contact = () => {
                     <Button 
                       type="submit" 
                       disabled={isSubmitting}
-                      className="w-full bg-amber-700 hover:bg-amber-800 text-white"
+                      className="w-full bg-primary hover:bg-primary-hover text-white"
                       size="lg"
                     >
                       {isSubmitting ? 'Envoi en cours...' : 'Envoyer le message'}
@@ -257,13 +257,13 @@ const Contact = () => {
       </section>
 
       {/* Info Section */}
-      <section className="py-20 bg-neutral-50">
+      <section className="py-20 bg-muted">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-2xl font-bold text-neutral-900 mb-4">
+            <h2 className="text-2xl font-bold text-foreground mb-4">
               Délai de réponse
             </h2>
-            <p className="text-lg text-neutral-600">
+            <p className="text-lg text-muted-foreground">
               Nous nous engageons à vous répondre sous 24 heures ouvrées. 
               Pour toute urgence, n'hésitez pas à nous contacter directement par téléphone.
             </p>

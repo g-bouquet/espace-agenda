@@ -35,11 +35,11 @@ const Exemples = () => {
       <section className="relative bg-gradient-to-b from-sky-50 to-white py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-neutral-900 sm:text-5xl">
+            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
               Espace Agenda s'adapte à{' '}
-              <span className="text-amber-700">votre activité</span>
+              <span className="text-primary">votre activité</span>
             </h1>
-            <p className="mt-6 text-lg leading-8 text-neutral-600">
+            <p className="mt-6 text-lg leading-8 text-muted-foreground">
               Découvrez comment des professionnels de l'accompagnement utilisent Espace Agenda pour simplifier leur quotidien et offrir une meilleure expérience à leurs clients.
             </p>
           </div>
@@ -50,10 +50,10 @@ const Exemples = () => {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-neutral-900 sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
               Des solutions pour chaque métier
             </h2>
-            <p className="mt-4 text-lg text-neutral-600">
+            <p className="mt-4 text-lg text-muted-foreground">
               Quelle que soit votre spécialité, Espace Agenda s'adapte à vos besoins
             </p>
           </div>
@@ -62,7 +62,7 @@ const Exemples = () => {
             {useCases.map((useCase, index) => {
               const Icon = useCase.icon;
               return (
-                <Card key={index} className="border-neutral-200 hover:border-amber-700 transition-all duration-300 hover:shadow-lg overflow-hidden">
+                <Card key={index} className="border-border hover:border-primary transition-all duration-300 hover:shadow-lg overflow-hidden">
                   <CardContent className="pt-0 p-0">
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-0">
                       {/* Image Section */}
@@ -79,21 +79,21 @@ const Exemples = () => {
                       {/* Content Section */}
                       <div className="lg:col-span-2 p-8">
                         <div className="flex items-start gap-4 mb-6">
-                          <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-amber-100 text-amber-700">
+                          <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
                             <Icon className="h-6 w-6" />
                           </div>
                           <div>
-                            <h3 className="text-2xl font-semibold text-neutral-900 mb-3">{useCase.title}</h3>
-                            <p className="text-lg text-neutral-600 mb-6">{useCase.description}</p>
+                            <h3 className="text-2xl font-semibold text-foreground mb-3">{useCase.title}</h3>
+                            <p className="text-lg text-muted-foreground mb-6">{useCase.description}</p>
                           </div>
                         </div>
                         
-                        <div className="bg-neutral-50 rounded-lg p-6">
-                          <h4 className="font-semibold text-neutral-900 mb-4">Fonctionnalités clés</h4>
+                        <div className="bg-muted rounded-lg p-6">
+                          <h4 className="font-semibold text-foreground mb-4">Fonctionnalités clés</h4>
                           <ul className="space-y-2">
                             {useCase.features.map((feature, idx) => (
-                              <li key={idx} className="flex items-start gap-2 text-neutral-600">
-                                <span className="text-amber-700 mt-1">•</span>
+                              <li key={idx} className="flex items-start gap-2 text-muted-foreground">
+                                <span className="text-primary mt-1">•</span>
                                 <span>{feature}</span>
                               </li>
                             ))}
@@ -110,10 +110,10 @@ const Exemples = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-neutral-50">
+      <section className="py-20 bg-muted">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-neutral-900 sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
               Les bénéfices concrets
             </h2>
           </div>
@@ -137,10 +137,10 @@ const Exemples = () => {
                 description: 'Une plateforme moderne et intuitive qui valorise votre image professionnelle.'
               }
             ].map((benefit, index) => (
-              <Card key={index} className="border-neutral-200">
+              <Card key={index} className="border-border">
                 <CardContent className="pt-6">
-                  <h3 className="text-xl font-semibold text-neutral-900 mb-3">{benefit.title}</h3>
-                  <p className="text-neutral-600">{benefit.description}</p>
+                  <h3 className="text-xl font-semibold text-foreground mb-3">{benefit.title}</h3>
+                  <p className="text-muted-foreground">{benefit.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -166,12 +166,12 @@ const Exemples = () => {
             {/* Content */}
             <div className="order-1 lg:order-2">
               <div className="lg:pl-8">
-                <p className="text-2xl text-neutral-700 italic mb-8 leading-relaxed">
+                <p className="text-2xl text-muted-foreground italic mb-8 leading-relaxed">
                   "Espace Agenda a transformé ma gestion quotidienne. Je gagne un temps précieux que je peux désormais consacrer entièrement à mes patients. La plateforme est intuitive et mes clients apprécient la simplicité de la réservation en ligne."
                 </p>
                 <div>
-                  <p className="font-semibold text-neutral-900 text-lg">Marie L.</p>
-                  <p className="text-neutral-600">Psychologue</p>
+                  <p className="font-semibold text-foreground text-lg">Marie L.</p>
+                  <p className="text-muted-foreground">Psychologue</p>
                 </div>
               </div>
             </div>
@@ -180,13 +180,13 @@ const Exemples = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-sky-900 text-white">
+      <section className="py-20 bg-secondary text-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
               Prêt à simplifier votre quotidien ?
             </h2>
-            <p className="mt-6 text-lg leading-8 text-sky-100">
+            <p className="mt-6 text-lg leading-8 text-blue-100">
               Rejoignez les professionnels qui ont choisi Espace Agenda pour gérer leurs rendez-vous en toute sérénité.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">

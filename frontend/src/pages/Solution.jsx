@@ -56,16 +56,16 @@ const Solution = () => {
       <section className="relative bg-gradient-to-b from-sky-50 to-white py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-neutral-900 sm:text-5xl">
+            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
               Une solution complète pour{' '}
-              <span className="text-amber-700">gérer vos rendez-vous</span>
+              <span className="text-primary">gérer vos rendez-vous</span>
             </h1>
-            <p className="mt-6 text-lg leading-8 text-neutral-600">
+            <p className="mt-6 text-lg leading-8 text-muted-foreground">
               Espace Agenda est bien plus qu'un simple agenda en ligne. C'est une plateforme complète, installée et personnalisée pour vous, qui vous fait gagner un temps précieux au quotidien.
             </p>
             <div className="mt-10">
               <Link to="/contact">
-                <Button size="lg" className="bg-amber-700 hover:bg-amber-800 text-white">
+                <Button size="lg" className="bg-primary hover:bg-primary-hover text-white">
                   Demander l'installation
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
@@ -79,10 +79,10 @@ const Solution = () => {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-neutral-900 sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
               Comment ça marche ?
             </h2>
-            <p className="mt-4 text-lg text-neutral-600">
+            <p className="mt-4 text-lg text-muted-foreground">
               Trois étapes simples pour démarrer avec votre nouvelle plateforme
             </p>
           </div>
@@ -105,13 +105,13 @@ const Solution = () => {
                 description: 'Vous bénéficiez d\'un support humain et d\'évolutions régulières de votre plateforme.'
               }
             ].map((item) => (
-              <Card key={item.step} className="border-neutral-200">
+              <Card key={item.step} className="border-border">
                 <CardContent className="pt-6">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-lg bg-amber-700 text-white text-2xl font-bold mb-4">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-lg bg-primary text-white text-2xl font-bold mb-4">
                     {item.step}
                   </div>
-                  <h3 className="text-xl font-semibold text-neutral-900">{item.title}</h3>
-                  <p className="mt-3 text-neutral-600">{item.description}</p>
+                  <h3 className="text-xl font-semibold text-foreground">{item.title}</h3>
+                  <p className="mt-3 text-muted-foreground">{item.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -120,13 +120,13 @@ const Solution = () => {
       </section>
 
       {/* What you get */}
-      <section className="py-20 bg-neutral-50">
+      <section className="py-20 bg-muted">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-neutral-900 sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
               Ce que vous obtenez
             </h2>
-            <p className="mt-4 text-lg text-neutral-600">
+            <p className="mt-4 text-lg text-muted-foreground">
               Une plateforme complète et personnalisée pour votre activité
             </p>
           </div>
@@ -184,7 +184,7 @@ const Solution = () => {
             ].map((feature, index) => {
               const Icon = feature.icon;
               return (
-                <Card key={index} className="border-neutral-200 hover:border-amber-700 transition-all duration-300 overflow-hidden group">
+                <Card key={index} className="border-border hover:border-primary transition-all duration-300 overflow-hidden group">
                   <div className="aspect-video w-full overflow-hidden bg-neutral-100">
                     <img 
                       src={feature.image} 
@@ -195,13 +195,13 @@ const Solution = () => {
                   <CardContent className="pt-6">
                     <div className="flex gap-4 items-start">
                       <div className="flex-shrink-0">
-                        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-amber-100 text-amber-700">
+                        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
                           <Icon className="h-5 w-5" />
                         </div>
                       </div>
                       <div>
-                        <h3 className="text-lg font-semibold text-neutral-900">{feature.title}</h3>
-                        <p className="mt-2 text-neutral-600">{feature.description}</p>
+                        <h3 className="text-lg font-semibold text-foreground">{feature.title}</h3>
+                        <p className="mt-2 text-muted-foreground">{feature.description}</p>
                       </div>
                     </div>
                   </CardContent>
@@ -216,7 +216,7 @@ const Solution = () => {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-neutral-900 sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
               Pourquoi Espace Agenda ?
             </h2>
           </div>
@@ -224,22 +224,22 @@ const Solution = () => {
           <div className="mx-auto mt-16 max-w-4xl">
             <div className="space-y-12">
               <div>
-                <h3 className="text-2xl font-semibold text-neutral-900 mb-4">Installation clé en main</h3>
-                <p className="text-lg text-neutral-600">
+                <h3 className="text-2xl font-semibold text-foreground mb-4">Installation clé en main</h3>
+                <p className="text-lg text-muted-foreground">
                   Pas besoin de compétences techniques. Nous installons et configurons tout pour vous. Vous n'avez qu'à vous concentrer sur votre métier, nous nous occupons du reste.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-2xl font-semibold text-neutral-900 mb-4">Personnalisation complète</h3>
-                <p className="text-lg text-neutral-600">
+                <h3 className="text-2xl font-semibold text-foreground mb-4">Personnalisation complète</h3>
+                <p className="text-lg text-muted-foreground">
                   Votre plateforme reflète votre identité professionnelle : logo, couleurs, nom de domaine personnalisé. Vos clients ne voient que votre marque, sans aucune mention du fournisseur technique.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-2xl font-semibold text-neutral-900 mb-4">Support humain inclus</h3>
-                <p className="text-lg text-neutral-600">
+                <h3 className="text-2xl font-semibold text-foreground mb-4">Support humain inclus</h3>
+                <p className="text-lg text-muted-foreground">
                   Une question ? Un besoin d'évolution ? Notre équipe est là pour vous accompagner. Support par email et téléphone inclus dans toutes nos offres.
                 </p>
               </div>
@@ -249,21 +249,21 @@ const Solution = () => {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 bg-neutral-50">
+      <section className="py-20 bg-muted">
         <div className="mx-auto max-w-4xl px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tight text-neutral-900 sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
               Questions fréquentes
             </h2>
           </div>
 
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq) => (
-              <AccordionItem key={faq.id} value={faq.id} className="bg-white border border-neutral-200 rounded-lg px-6">
-                <AccordionTrigger className="text-left font-semibold text-neutral-900 hover:text-amber-700">
+              <AccordionItem key={faq.id} value={faq.id} className="bg-white border border-border rounded-lg px-6">
+                <AccordionTrigger className="text-left font-semibold text-foreground hover:text-primary">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-neutral-600">
+                <AccordionContent className="text-muted-foreground">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
@@ -273,13 +273,13 @@ const Solution = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-sky-900 text-white">
+      <section className="py-20 bg-secondary text-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
               Prêt à démarrer ?
             </h2>
-            <p className="mt-6 text-lg leading-8 text-sky-100">
+            <p className="mt-6 text-lg leading-8 text-blue-100">
               Demandez l'installation de votre plateforme personnalisée et découvrez comment Espace Agenda peut transformer votre gestion des rendez-vous.
             </p>
             <div className="mt-10">
