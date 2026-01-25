@@ -5,8 +5,11 @@ import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../components/ui/accordion';
 import { faqs } from '../mock';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const Solution = () => {
+  const { ref: heroRef, inView: heroInView } = useScrollAnimation();
+  const { ref: featuresRef, inView: featuresInView } = useScrollAnimation();
   const features = [
     {
       icon: Globe,
