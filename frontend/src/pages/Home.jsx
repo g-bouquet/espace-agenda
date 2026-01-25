@@ -138,33 +138,47 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="mx-auto mt-16 max-w-4xl">
-            <div className="space-y-8">
+          <div className="mx-auto mt-16 max-w-5xl">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 {
                   step: '1',
                   title: 'Échange et personnalisation',
-                  description: 'Nous discutons de vos besoins et configurons votre plateforme selon votre identité visuelle.'
+                  description: 'Nous discutons de vos besoins et configurons votre plateforme selon votre identité visuelle.',
+                  image: 'https://images.unsplash.com/photo-1758518729706-b1810dd39cc6?w=600&q=80'
                 },
                 {
                   step: '2',
                   title: 'Installation et formation',
-                  description: 'Nous installons la solution et vous formons à son utilisation pour une prise en main optimale.'
+                  description: 'Nous installons la solution et vous formons à son utilisation pour une prise en main optimale.',
+                  image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&q=80'
                 },
                 {
                   step: '3',
                   title: 'Accompagnement continu',
-                  description: 'Vous bénéficiez d\'un support humain et d\'évolutions régulières de votre plateforme.'
+                  description: 'Vous bénéficiez d\'un support humain et d\'évolutions régulières de votre plateforme.',
+                  image: 'https://images.unsplash.com/photo-1626863905121-3b0c0ed7b94c?w=600&q=80'
                 }
               ].map((item) => (
-                <div key={item.step} className="flex gap-6">
-                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-amber-700 text-white text-xl font-bold">
-                    {item.step}
+                <div key={item.step} className="relative group">
+                  {/* Image with overlay */}
+                  <div className="aspect-square overflow-hidden rounded-lg mb-6">
+                    <img 
+                      src={item.image} 
+                      alt={item.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/60 to-transparent"></div>
+                    <div className="absolute bottom-4 left-4">
+                      <div className="flex h-14 w-14 items-center justify-center rounded-lg bg-amber-700 text-white text-2xl font-bold">
+                        {item.step}
+                      </div>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-neutral-900">{item.title}</h3>
-                    <p className="mt-2 text-neutral-600">{item.description}</p>
-                  </div>
+                  
+                  {/* Content */}
+                  <h3 className="text-xl font-semibold text-neutral-900 mb-3">{item.title}</h3>
+                  <p className="text-neutral-600">{item.description}</p>
                 </div>
               ))}
             </div>
