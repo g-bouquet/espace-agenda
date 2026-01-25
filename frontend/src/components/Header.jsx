@@ -20,14 +20,14 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80 transition-all duration-300">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between py-2.5 px-6 lg:px-8" aria-label="Global">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between py-[15px] px-6 lg:px-8" aria-label="Global">
         {/* Logo */}
         <div className="flex lg:flex-1">
           <Link to="/" className="-m-1.5 p-1.5 flex items-center transition-transform duration-300 hover:scale-105">
             <img 
               src="/logo-espace-agenda.png" 
               alt="Espace Agenda" 
-              className="h-[70px] w-auto"
+              className="h-[60px] w-auto"
             />
           </Link>
         </div>
