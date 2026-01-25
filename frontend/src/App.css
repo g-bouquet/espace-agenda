@@ -1,29 +1,56 @@
-/* Transitions for interactive elements */
+/* Micro-interactions et animations subtiles */
+
+/* Transitions pour tous les éléments interactifs */
 button, a, input, textarea, select {
-    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Boutons - Effets hover subtils */
+button:hover:not(:disabled) {
+    transform: translateY(-1px);
+}
+
+button:active:not(:disabled) {
+    transform: translateY(0);
 }
 
 /* Link hover effects */
 a {
-    transition: color 0.2s ease;
+    transition: color 0.3s ease, border-color 0.3s ease;
 }
 
-/* Card hover effects */
+/* Card hover effects - très discret */
 .hover\:shadow-lg {
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hover\:shadow-lg:hover {
     transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgba(59, 79, 228, 0.1), 0 8px 10px -6px rgba(59, 79, 228, 0.05);
 }
 
-/* Smooth image scaling */
+/* Image scaling on hover - très subtil */
 img {
-    transition: transform 0.3s ease;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Focus ring for accessibility */
+/* Focus ring pour accessibilité */
 *:focus-visible {
-    outline: 2px solid hsl(var(--ring));
+    outline: 2px solid #3b4fe4;
     outline-offset: 2px;
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Parallax effect - très discret */
+.parallax-slow {
+    transition: transform 0.3s ease-out;
+}
+
+/* Header shrink on scroll */
+.header-scrolled {
+    transition: all 0.3s ease;
 }
